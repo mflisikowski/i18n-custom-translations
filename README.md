@@ -1,8 +1,4 @@
-# blank
+# Admin
 
-blank
-
-## Attributes
-
-- **Database**: mongodb
-- **Storage Adapter**: localDisk
+L: test@test.com
+P: test1234
