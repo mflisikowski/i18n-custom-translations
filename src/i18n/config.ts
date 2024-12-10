@@ -1,5 +1,6 @@
 import { en } from '@payloadcms/translations/languages/en'
 import { pl } from '@payloadcms/translations/languages/pl'
+import { translations } from '@/i18n/custom-translations'
 
 import type { Config } from 'payload'
 
@@ -32,24 +33,7 @@ export const payloadLocalizationConfig: Config['localization'] = {
 export const payloadI18nConfig: Config['i18n'] = {
   supportedLanguages: { en, pl },
   fallbackLanguage: Locale.PL,
-  translations: {
-    en: {
-      custom: {
-        'page-title': 'Page title EN',
-      },
-      fields: {
-        slug: 'Slug EN',
-      },
-    },
-    pl: {
-      custom: {
-        'page-title': 'Page title PL',
-      },
-      fields: {
-        slug: 'Slug PL',
-      },
-    },
-  },
+  translations,
 }
 
 export const nextIntlConfig = {

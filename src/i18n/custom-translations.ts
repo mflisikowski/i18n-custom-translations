@@ -8,10 +8,11 @@ import type { NestedKeysStripped } from '@payloadcms/translations'
  * ... 59 more ...; youDidNotRequestPassword: string; };
  * ... 7 more ...; version: { ...; }; }> | undefined'.ts(2339)
  */
-export const customTranslations: Config['i18n']['translations'] = {
+export const translations: Config['i18n']['translations'] = {
   en: {
     custom: {
       'page-title': 'Page title EN',
+      'page-my-field': 'Page my field EN',
     },
     fields: {
       slug: 'Slug EN',
@@ -20,6 +21,7 @@ export const customTranslations: Config['i18n']['translations'] = {
   pl: {
     custom: {
       'page-title': 'Page title PL',
+      'page-my-field': 'Page my field PL',
     },
     fields: {
       slug: 'Slug PL',
@@ -27,5 +29,5 @@ export const customTranslations: Config['i18n']['translations'] = {
   },
 }
 
-export type CustomTranslationsObject = typeof customTranslations.en
+export type CustomTranslationsObject = (typeof translations)[keyof typeof translations]
 export type CustomTranslationsKeys = NestedKeysStripped<CustomTranslationsObject>
