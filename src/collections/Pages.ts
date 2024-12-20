@@ -13,20 +13,35 @@ export const Pages: CollectionConfig = {
   },
   fields: [
     {
-      label: labelHelper('custom:page-title'),
-      required: true,
-      name: 'title',
-      type: 'text',
-    },
-    {
-      label: labelHelper('fields:slug'),
-      name: 'slug',
-      type: 'text',
-    },
-    {
-      label: labelHelper('custom:page-my-field'),
-      name: 'myField',
-      type: 'text',
+      type: 'tabs',
+      tabs: [
+        {
+          label: labelHelper('custom:tabs-one'),
+          fields: [
+            {
+              label: labelHelper('custom:page-title'),
+              required: true,
+              name: 'title',
+              type: 'text',
+            },
+          ],
+        },
+        {
+          label: labelHelper('custom:tabs-two'),
+          fields: [
+            {
+              label: labelHelper('fields:slug'),
+              name: 'slug',
+              type: 'text',
+            },
+            {
+              label: labelHelper('custom:page-my-field'),
+              name: 'myField',
+              type: 'text',
+            },
+          ],
+        },
+      ],
     },
   ],
 }
