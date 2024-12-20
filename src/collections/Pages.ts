@@ -16,7 +16,9 @@ export const Pages: CollectionConfig = {
       type: 'tabs',
       tabs: [
         {
-          label: tl('custom:tabs-one'),
+          // why this LabelFunction is not working?
+          // label: tl('custom:tabs-one'),
+          label: ({ t }) => t('custom:tabs-one'),
           fields: [
             {
               label: tl('custom:page-title'),
@@ -27,7 +29,9 @@ export const Pages: CollectionConfig = {
           ],
         },
         {
-          label: tl('custom:tabs-two'),
+          // why this LabelFunction is not working?
+          // label: tl('custom:tabs-two'),
+          label: ({ t }) => t('custom:tabs-two'),
           fields: [
             {
               label: tl('fields:slug'),
