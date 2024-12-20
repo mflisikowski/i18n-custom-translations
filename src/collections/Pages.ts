@@ -4,7 +4,7 @@ import { TFunction } from 'node_modules/@payloadcms/translations/dist/types'
 import type { CollectionConfig } from 'payload'
 
 // prettier-ignore
-const labelHelper = (transKey: CustomTranslationsKeys | DefaultTranslationKeys) => ({ t }: { t: TFunction<CustomTranslationsKeys | DefaultTranslationKeys> }) => t(transKey)
+const tl = (transKey: CustomTranslationsKeys | DefaultTranslationKeys) => ({ t }: { t: TFunction<CustomTranslationsKeys | DefaultTranslationKeys> }) => t(transKey)
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -16,10 +16,10 @@ export const Pages: CollectionConfig = {
       type: 'tabs',
       tabs: [
         {
-          label: labelHelper('custom:tabs-one'),
+          label: tl('custom:tabs-one'),
           fields: [
             {
-              label: labelHelper('custom:page-title'),
+              label: tl('custom:page-title'),
               required: true,
               name: 'title',
               type: 'text',
@@ -27,15 +27,15 @@ export const Pages: CollectionConfig = {
           ],
         },
         {
-          label: labelHelper('custom:tabs-two'),
+          label: tl('custom:tabs-two'),
           fields: [
             {
-              label: labelHelper('fields:slug'),
+              label: tl('fields:slug'),
               name: 'slug',
               type: 'text',
             },
             {
-              label: labelHelper('custom:page-my-field'),
+              label: tl('custom:page-my-field'),
               name: 'myField',
               type: 'text',
             },
