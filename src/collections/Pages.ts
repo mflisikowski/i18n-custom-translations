@@ -16,12 +16,12 @@ export const Pages: CollectionConfig = {
       type: 'tabs',
       tabs: [
         {
-          // why this LabelFunction is not working?
+          // Temp replace label function with string because of the Error: Functions cannot be passed directly to Client Components unless you explicitly expose it by marking it with "use server". Or maybe you meant to call this function rather than return it. {label: function label, fields: [...]}
           // label: tl('custom:tabs-one'),
-          label: ({ t }) => t('custom:tabs-one'),
+          label: 'Tabs One',
           fields: [
             {
-              label: tl('custom:page-title'),
+              label: 'Page Title',
               required: true,
               name: 'title',
               type: 'text',
@@ -29,17 +29,18 @@ export const Pages: CollectionConfig = {
           ],
         },
         {
-          // why this LabelFunction is not working?
+          // Temp replace label function with string because of the Error: Functions cannot be passed directly to Client Components unless you explicitly expose it by marking it with "use server". Or maybe you meant to call this function rather than return it. {label: function label, fields: [...]}
           // label: tl('custom:tabs-two'),
-          label: ({ t }) => t('custom:tabs-two'),
+          // label: ({ t }) => t('custom:tabs-two'),
+          label: 'Tabs Two',
           fields: [
             {
-              label: tl('fields:slug'),
+              label: 'Slug',
               name: 'slug',
               type: 'text',
             },
             {
-              label: tl('custom:page-my-field'),
+              label: 'My Field',
               name: 'myField',
               type: 'text',
             },
