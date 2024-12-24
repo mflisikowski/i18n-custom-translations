@@ -20,7 +20,7 @@ export const Posts: CollectionConfig = {
         {
           defaultValue: 'image',
           label: false,
-          name: 'type',
+          name: 'mediaType',
           type: 'radio',
           options: [
             {
@@ -44,9 +44,9 @@ export const Posts: CollectionConfig = {
           label: 'Image',
           name: 'image',
           type: 'upload',
-          // admin: {
-          //   condition: (_, siblingData) => siblingData?.type === 'image',
-          // },
+          admin: {
+            condition: (_, siblingData) => siblingData?.mediatype === 'image',
+          },
         },
         {
           filterOptions: {
@@ -59,9 +59,9 @@ export const Posts: CollectionConfig = {
           label: 'Video',
           name: 'video',
           type: 'upload',
-          // admin: {
-          //   condition: (_, siblingData) => siblingData?.type === 'video',
-          // },
+          admin: {
+            condition: (_, siblingData) => siblingData?.mediaType === 'video',
+          },
         },
       ],
     },
