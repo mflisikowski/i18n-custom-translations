@@ -45,7 +45,7 @@ export const Posts: CollectionConfig = {
           name: 'image',
           type: 'upload',
           admin: {
-            condition: (_, siblingData) => siblingData?.mediatype === 'image',
+            condition: (_, siblingData) => siblingData?.mediaType === 'image',
           },
         },
         {
